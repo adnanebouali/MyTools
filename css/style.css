@@ -12,8 +12,9 @@ body {
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: smooth;
-
-  flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
 }
 .container {
   margin-top: 50px;
@@ -22,6 +23,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  scroll-behavior: smooth;
 }
 .mytools .container h1 {
   margin: 0;
@@ -74,6 +76,7 @@ body {
   background-color: var(--main-color);
   display: none;
 }
+
 .content .container .col:hover .links ul {
   list-style: none;
   padding: 0;
@@ -101,14 +104,14 @@ body {
 }
 
 footer {
-  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
   background-color: rgb(22, 22, 22);
   width: 100%;
   text-align: center;
   font-family: "Lato", sans-serif;
   padding: 5px 10px;
   color: rgb(124, 124, 124);
-  flex-shrink: 0;
 }
 footer i {
   padding: 0 2px;
