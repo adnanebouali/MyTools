@@ -78,7 +78,7 @@ body {
   display: block;
   padding: var(--padding-value);
   text-decoration: none;
-  color: black;
+  color: rgb(17, 17, 17);
   border-bottom: 0.5px solid var(--main-color);
   font-size: 17px;
   font-weight: 400;
@@ -91,6 +91,7 @@ body {
 }
 .content .container .col .links a:hover {
   padding-left: 30px;
+  color: var(--main-color);
 }
 
 footer {
