@@ -32,19 +32,84 @@ body {
   font-weight: 600;
   font-size: 50px;
   color: var(--text-color-one);
+  animation: myAnim 1.5s ease-in-out alternate;
 }
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .mytools .container p {
   font-family: "Lato", sans-serif;
   font-size: 22px;
   color: var(--text-color-one);
   position: relative;
+  animation: myAnimp 1.5s ease-in-out alternate;
+}
+@keyframes myAnimp {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .mytools .container a i {
   color: var(--text-color-one);
 }
 .mytools .container a i:hover {
   color: var(--main-color);
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation: rotateIn 1s alternate linear infinite;
 }
+@-webkit-keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .content .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
