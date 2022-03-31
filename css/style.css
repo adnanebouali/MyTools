@@ -179,17 +179,76 @@ footer i {
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-  .menu i {
-    font-size: 35px;
-    color: rgba(250, 235, 215, 0.65);
-    background-color: rgba(61, 61, 221, 0.719);
-    padding: 2px 5px;
-    margin: 0;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Styles for the menu button */
+  .menu-btn {
+    background-color: #3d63cc;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    height: 56px;
+    left: 80%;
     position: fixed;
-    transform: translate(-50%, -50%);
-    top: 93%;
-    left: 89%;
-    border-radius: 3px;
+    top: 85%;
+    width: 56px;
+  }
+
+  /* Styles for the menu */
+  .menu {
+    bottom: 0;
+    background-color: #000000c5;
+    left: 0;
+    margin: 0;
+    padding: 32px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.2s linear;
+  }
+
+  /* Creating the hamburger/hotdog icon in CSS */
+  .menu-btn li {
+    background-color: #ffffff;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 16px;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* The following two lines set the three lines of our hamburger/hotdog icon apart */
+  .menu-btn li:first-child {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  .menu-btn li:last-child {
+    transform: translate3d(0, 4px, 0);
+  }
+
+  /* We're now in the animation territory. These are the classes you toggle on with our Javascript function. */
+  .menu-btn--on li:first-child {
+    transform: rotate(135deg) translate3d(0, 0, 0);
+  }
+
+  .menu-btn--on li:last-child {
+    transform: rotate(-135deg) translate3d(0, 0, 0);
+  }
+
+  .menu-btn--on li:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu--open {
+    transform: translate3d(0, 0, 0);
   }
 }
 
