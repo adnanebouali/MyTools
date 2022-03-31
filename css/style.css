@@ -179,6 +179,18 @@ footer i {
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
+  .menu i {
+    font-size: 35px;
+    color: rgba(250, 235, 215, 0.65);
+    background-color: rgba(61, 61, 221, 0.719);
+    padding: 2px 5px;
+    margin: 0;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 93%;
+    left: 89%;
+    border-radius: 3px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
