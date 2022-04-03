@@ -6,12 +6,14 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-image: url(/img/background.png);
   background-size: cover;
   background-attachment: fixed;
-  scroll-behavior: smooth;
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
@@ -23,7 +25,6 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  scroll-behavior: smooth;
 }
 .mytools .container h1 {
   margin: 0;
@@ -34,6 +35,7 @@ body {
   color: var(--text-color-one);
   animation: myAnim 1.5s ease-in-out alternate;
 }
+/* animation for the h1 */
 @keyframes myAnim {
   0% {
     opacity: 0;
@@ -45,7 +47,7 @@ body {
     transform: translateX(0);
   }
 }
-
+/* ------------------------------------- */
 .mytools .container p {
   font-family: "Lato", sans-serif;
   font-size: 22px;
@@ -53,6 +55,7 @@ body {
   position: relative;
   animation: myAnimp 1.5s ease-in-out alternate;
 }
+/* animation for the p */
 @keyframes myAnimp {
   0% {
     opacity: 0;
@@ -64,6 +67,7 @@ body {
     transform: translateX(0);
   }
 }
+/* ----------------------------- */
 .mytools .container a i {
   color: var(--text-color-one);
 }
@@ -77,6 +81,8 @@ body {
   animation-fill-mode: both;
   animation: rotateIn 1s alternate linear infinite;
 }
+/* animation for the icon */
+
 @-webkit-keyframes rotateIn {
   0% {
     -webkit-transform-origin: center;
@@ -109,11 +115,11 @@ body {
     opacity: 1;
   }
 }
-
+/* -------------------------------------- */
 .content .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
+  column-count: 1;
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
 }
 .content .container .col {
   background-color: var(--text-color-one);
@@ -121,9 +127,12 @@ body {
   border-bottom: 5px solid var(--main-color);
   font-family: "Lato", sans-serif;
   position: relative;
-}
-.content .container .col:nth-child(2) {
-  grid-row: span 2;
+  height: fit-content;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 100%;
+  display: block;
+  break-inside: avoid-column;
 }
 
 .content .container .col h1 {
@@ -175,8 +184,12 @@ footer i {
   padding: 0 2px;
   color: rgb(73, 49, 207);
 }
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+.menu {
+  display: none;
+}
+
+/* Small devices (landscape phones, 480px and up) */
+@media (max-width: 480px) {
   ul {
     list-style: none;
     padding: 0;
@@ -184,9 +197,9 @@ footer i {
 
   /* Styles for the menu button */
   .menu-btn {
-    background-color: #3d63cc;
+    background-color: var(--main-color);
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
     cursor: pointer;
     height: 56px;
     left: 80%;
@@ -201,12 +214,26 @@ footer i {
     background-color: #000000c5;
     left: 0;
     margin: 0;
-    padding: 32px;
+    padding: 50px 20px;
     position: fixed;
     top: 0;
     width: 100%;
     transform: translate3d(-100%, 0, 0);
     transition: transform 0.2s linear;
+    display: block;
+    overflow: auto;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+    background-color: rgb(84, 84, 84);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-size: 20px;
+    font-family: "Fredoka", sans-serif;
+    margin: 8px 0;
   }
 
   /* Creating the hamburger/hotdog icon in CSS */
@@ -249,11 +276,22 @@ footer i {
     transform: translate3d(0, 0, 0);
   }
 }
-
+@media (min-width: 481px) {
+  .content .container {
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+  }
+}
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+  .content .container {
+    column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
   }
 }
 
@@ -262,11 +300,21 @@ footer i {
   .container {
     width: 970px;
   }
+  .content .container {
+    column-count: 4;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container {
     width: 900px;
+  }
+  .content .container {
+    column-count: 4;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
   }
 }
