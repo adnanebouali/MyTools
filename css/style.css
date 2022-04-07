@@ -135,7 +135,7 @@ body {
   break-inside: avoid-column;
 }
 
-.content .container .col h1 {
+.content .container .col h3 {
   margin: 0;
   padding: var(--padding-value);
   font-size: 18px;
