@@ -147,6 +147,12 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.answercont {
+  max-height: 0;
+  transition: 0.3s;
 }
 
 .content .container .col .links a {
@@ -189,7 +195,7 @@ footer i {
 }
 
 /* Small devices (landscape phones, 480px and up) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   ul {
     list-style: none;
     padding: 0;
@@ -202,9 +208,9 @@ footer i {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
     cursor: pointer;
     height: 56px;
-    left: 80%;
+    right: 20px;
+    bottom: 20px;
     position: fixed;
-    top: 85%;
     width: 56px;
   }
 
@@ -283,6 +289,7 @@ footer i {
     -webkit-column-count: 2;
   }
 }
+
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   .container {
@@ -318,3 +325,5 @@ footer i {
     -webkit-column-count: 4;
   }
 }
+/* **********************************************
+ */

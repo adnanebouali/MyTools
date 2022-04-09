@@ -34,6 +34,34 @@
     </div>
     <div class="content">
       <div class="container">
+        
+        <!-- ******************************************************** -->
+        <div class="col" id="free-images">
+          <div class="links">   
+              <h3 class="question">How do I verify my email?</h3>
+              <div class="answercont">
+                <div class="answer">
+                  <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer" >Unsplash</a >
+                  <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a >
+                  <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a >
+                  <a href="https://burst.shopify.com/" target="_blank" rel="noopener noreferrer">Burst</a >
+                  <a href="https://kaboompics.com/" target="_blank" rel="noopener noreferrer">kaboompics</a >  
+                  <a href="https://www.splitshire.com/" target="_blank" rel="noopener noreferrer">Splitshire</a >  
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+
+
+
+        
+        <!-- ******************************************************** -->
+        
+        
+        
+        
         <div class="col" id="free-images">
           <h3>free images</h3>
           <div class="links">
@@ -376,4 +404,23 @@
     });
 
     </script>
+    <script>let question = document.querySelectorAll(".question");
+
+      question.forEach(question => {
+        question.addEventListener("click", event => {
+          const active = document.querySelector(".question.active");
+          if(active && active !== question ) {
+            active.classList.toggle("active");
+            active.nextElementSibling.style.maxHeight = 0;
+          }
+          question.classList.toggle("active");
+          const answer = question.nextElementSibling;
+          if(question.classList.contains("active")){
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          } else {
+            answer.style.maxHeight = 0;
+          }
+        })
+      })
+      </script>
 </html>
