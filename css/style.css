@@ -203,7 +203,8 @@ footer i {
   color: rgb(73, 49, 207);
 }
 
-.menu {
+.menu,
+.menu-btn {
   display: none;
 }
 
@@ -225,6 +226,7 @@ footer i {
     bottom: 20px;
     position: fixed;
     width: 56px;
+    display:block;
   }
 
   /* Styles for the menu */
