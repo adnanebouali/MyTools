@@ -147,12 +147,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  cursor: pointer;
-}
-
-.answercont {
-  max-height: 0;
-  transition: 0.3s;
+  pointer-events: none;
 }
 
 .content .container .col .links a {
@@ -228,18 +223,20 @@ footer i {
     transition: transform 0.2s linear;
     display: block;
     overflow: auto;
+    text-transform: capitalize;
   }
 
   .menu a {
     text-decoration: none;
     color: rgb(233, 233, 233);
-    background-color: rgb(84, 84, 84);
+
     display: flex;
     justify-content: center;
     padding: 15px;
     font-size: 20px;
     font-family: "Fredoka", sans-serif;
     margin: 8px 0;
+    background-color: rgb(58, 57, 59);
   }
 
   /* Creating the hamburger/hotdog icon in CSS */
@@ -287,6 +284,16 @@ footer i {
     column-count: 2;
     -moz-column-count: 2;
     -webkit-column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .content .container .col h3 {
+    pointer-events: visible;
+  }
+  .answercont {
+    max-height: 0;
+    transition: 0.3s;
+    overflow: hidden;
   }
 }
 
