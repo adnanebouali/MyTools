@@ -3,9 +3,11 @@
   --main-color: #685dfd;
   --padding-value: 15px 10px;
 }
+
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,6 +20,7 @@ body {
   margin: 0;
   padding-bottom: 6rem;
 }
+
 .container {
   margin-top: 50px;
   margin-right: auto;
@@ -26,6 +29,7 @@ body {
   padding-right: 20px;
   text-align: center;
 }
+
 .mytools .container h1 {
   margin: 0;
   padding: 0;
@@ -35,6 +39,7 @@ body {
   color: var(--text-color-one);
   animation: myAnim 1.5s ease-in-out alternate;
 }
+
 /* animation for the h1 */
 @keyframes myAnim {
   0% {
@@ -47,6 +52,7 @@ body {
     transform: translateX(0);
   }
 }
+
 /* ------------------------------------- */
 .mytools .container p {
   font-family: "Lato", sans-serif;
@@ -55,6 +61,7 @@ body {
   position: relative;
   animation: myAnimp 1.5s ease-in-out alternate;
 }
+
 /* animation for the p */
 @keyframes myAnimp {
   0% {
@@ -67,10 +74,12 @@ body {
     transform: translateX(0);
   }
 }
+
 /* ----------------------------- */
 .mytools .container a i {
   color: var(--text-color-one);
 }
+
 .mytools .container a i:hover {
   color: var(--main-color);
   -webkit-animation-name: rotateIn;
@@ -81,6 +90,7 @@ body {
   animation-fill-mode: both;
   animation: rotateIn 1s alternate linear infinite;
 }
+
 /* animation for the icon */
 
 @-webkit-keyframes rotateIn {
@@ -91,6 +101,7 @@ body {
     transform: rotate3d(0, 0, 1, -200deg);
     opacity: 0;
   }
+
   100% {
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -99,6 +110,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes rotateIn {
   0% {
     -webkit-transform-origin: center;
@@ -107,6 +119,7 @@ body {
     transform: rotate3d(0, 0, 1, -200deg);
     opacity: 0;
   }
+
   100% {
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -115,12 +128,14 @@ body {
     opacity: 1;
   }
 }
+
 /* -------------------------------------- */
 .content .container {
   column-count: 1;
   -moz-column-count: 1;
   -webkit-column-count: 1;
 }
+
 .content .container .col {
   background-color: var(--text-color-one);
   border-radius: 5px;
@@ -132,7 +147,7 @@ body {
   margin-bottom: 20px;
   width: 100%;
   display: block;
-  break-inside: avoid-column;
+  break-inside: avoid;
 }
 
 .content .container .col h3 {
@@ -166,6 +181,7 @@ body {
 .content .container .col .links a:last-child {
   border-bottom: none;
 }
+
 .content .container .col .links a:hover {
   padding-left: 30px;
   color: var(--main-color);
@@ -181,10 +197,12 @@ footer {
   padding: 5px 10px;
   color: rgb(124, 124, 124);
 }
+
 footer i {
   padding: 0 2px;
   color: rgb(73, 49, 207);
 }
+
 .menu {
   display: none;
 }
@@ -227,9 +245,9 @@ footer i {
   }
 
   .menu a {
+    text-align: center;
     text-decoration: none;
     color: rgb(233, 233, 233);
-
     display: flex;
     justify-content: center;
     padding: 15px;
@@ -279,6 +297,7 @@ footer i {
     transform: translate3d(0, 0, 0);
   }
 }
+
 @media (min-width: 481px) {
   .content .container {
     column-count: 2;
@@ -286,10 +305,12 @@ footer i {
     -webkit-column-count: 2;
   }
 }
+
 @media (max-width: 480px) {
   .content .container .col h3 {
     pointer-events: visible;
   }
+
   .answercont {
     max-height: 0;
     transition: 0.3s;
@@ -300,8 +321,9 @@ footer i {
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 760px;
   }
+
   .content .container {
     column-count: 3;
     -moz-column-count: 3;
@@ -312,8 +334,9 @@ footer i {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 980px;
   }
+
   .content .container {
     column-count: 4;
     -moz-column-count: 4;
@@ -324,13 +347,15 @@ footer i {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container {
-    width: 900px;
+    width: 1000px;
   }
+
   .content .container {
     column-count: 4;
     -moz-column-count: 4;
     -webkit-column-count: 4;
   }
 }
+
 /* **********************************************
  */
