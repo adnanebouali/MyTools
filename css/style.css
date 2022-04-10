@@ -208,7 +208,6 @@ footer i {
   display: none;
 }
 
-/* Small devices (landscape phones, 480px and up) */
 @media (max-width: 768px) {
   ul {
     list-style: none;
@@ -226,7 +225,7 @@ footer i {
     bottom: 20px;
     position: fixed;
     width: 56px;
-    display:block;
+    display: block;
   }
 
   /* Styles for the menu */
@@ -320,7 +319,6 @@ footer i {
   }
 }
 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   .container {
     width: 760px;
@@ -333,7 +331,6 @@ footer i {
   }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .container {
     width: 980px;
@@ -346,7 +343,6 @@ footer i {
   }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container {
     width: 1000px;
@@ -358,6 +354,3 @@ footer i {
     -webkit-column-count: 4;
   }
 }
-
-/* **********************************************
- */
