@@ -37,45 +37,15 @@ body {
   font-weight: 600;
   font-size: 50px;
   color: var(--text-color-one);
-  animation: myAnim 1.5s ease-in-out alternate;
 }
 
-/* animation for the h1 */
-@keyframes myAnim {
-  0% {
-    opacity: 0;
-    transform: translateX(-250px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ------------------------------------- */
 .mytools .container p {
   font-family: "Lato", sans-serif;
   font-size: 22px;
   color: var(--text-color-one);
   position: relative;
-  animation: myAnimp 1.5s ease-in-out alternate;
 }
 
-/* animation for the p */
-@keyframes myAnimp {
-  0% {
-    opacity: 0;
-    transform: translateX(250px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ----------------------------- */
 .mytools .container a i {
   color: var(--text-color-one);
 }
