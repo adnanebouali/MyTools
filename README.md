@@ -1,5 +1,5 @@
 # MyTools
-one page website that contains a few of a useful links that a web designer or a front end developer needs.
+one page website that contains a few of useful links that a web designer needs.
 # status 
 completed
 # Live Demo
